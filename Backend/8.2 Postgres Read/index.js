@@ -9,7 +9,7 @@ const db=new pg.Client({
   user:"postgres",
   host:"localhost",
   database:"world",
-  password:"yuva4305",
+  password:"123456",
   port:5432
 });
 
@@ -17,7 +17,7 @@ db.connect();
 
 let quiz=[];
 
-db.query("SELECT * FROM countryflag",(err,res)=>{
+db.query("SELECT * FROM Flags",(err,res)=>{
   if (err) console.error("Error executing query",err.stack);
   else quiz=res.rows;
   db.end();
