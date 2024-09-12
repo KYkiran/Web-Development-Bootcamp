@@ -23,7 +23,7 @@ function App() {
           lName:value,
           email:prevValue.email
         }
-      }if (name==="email"){
+      }if (name===" "){
         return{
           fName:prevValue.fName,
           lName:prevValue.lName,

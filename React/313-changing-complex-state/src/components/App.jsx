@@ -5,7 +5,6 @@ function App() {
     fName:"",
     lName:""
   });
-
   function handleChange(event){
     const {value,name}=event.target;
 
