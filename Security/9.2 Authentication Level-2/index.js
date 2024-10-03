@@ -46,11 +46,10 @@ app.post("/register", async (req, res) => {
       bcrypt.hash(password,saltRounds,async(err,hash)=>{
         if (err) console.log(err);
         else{
-          const result = await db.query(
+          await db.query(
             "INSERT INTO users (email, password) VALUES ($1, $2)",
             [email, hash]
           );
-          console.log(result);
           res.render("secrets.ejs");
         }
       }); 
